@@ -7,7 +7,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-8RVQVZDZ4L');
 </script>
 <meta charset="UTF-8">
@@ -25,34 +24,26 @@
     --rule:    #DDD8CF;
     --surface: #EFECE4;
   }
-
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    background: var(--cream);
-    color: var(--ink);
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 1.8;
+    background: var(--cream); color: var(--ink);
+    font-family: "Inter", sans-serif; font-weight: 300;
+    font-size: 15px; line-height: 1.8;
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── NAV ── */
+  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: var(--cream);
-    border-bottom: 1px solid var(--rule);
+    background: var(--cream); border-bottom: 1px solid var(--rule);
   }
   .nav-main {
-    height: 60px;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 40px;
-    max-width: 1100px; margin: 0 auto;
+    height: 60px; display: flex; align-items: center; justify-content: space-between;
+    padding: 0 40px; max-width: 1100px; margin: 0 auto;
   }
   .nav-logo {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 300; font-size: 14px;
+    font-family: "Cormorant Garamond", serif; font-weight: 300; font-size: 14px;
     letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--ink); text-decoration: none; white-space: nowrap;
   }
@@ -69,135 +60,123 @@
     color: var(--ink); border-bottom: 1px solid var(--gold);
     padding-bottom: 1px; height: auto; padding: 0 18px;
   }
-  .nav-links .nav-cta > a:hover { color: var(--gold); border-color: var(--gold); }
-
-  /* Dropdown */
+  .nav-links .nav-cta > a:hover { color: var(--gold); }
   .has-dropdown { position: relative; }
-  .has-dropdown > a .caret {
-    font-size: 8px; opacity: 0.5; transition: transform 0.2s;
-  }
+  .has-dropdown > a .caret { font-size: 8px; opacity: 0.5; transition: transform 0.2s; }
   .has-dropdown:hover > a .caret { transform: rotate(180deg); opacity: 1; }
   .dropdown {
-    display: none;
-    position: absolute; top: 100%; left: 0;
-    background: var(--cream);
-    border: 1px solid var(--rule);
-    border-top: 2px solid var(--gold);
-    min-width: 180px;
-    z-index: 200;
-    padding: 8px 0;
+    display: none; position: absolute; top: 100%; left: 0;
+    background: var(--cream); border: 1px solid var(--rule);
+    border-top: 2px solid var(--gold); min-width: 180px; z-index: 200; padding: 8px 0;
   }
   .has-dropdown:hover .dropdown { display: block; }
   .dropdown a {
-    display: block;
-    font-size: 11px; letter-spacing: 0.11em; text-transform: uppercase;
+    display: block; font-size: 11px; letter-spacing: 0.11em; text-transform: uppercase;
     color: var(--muted); text-decoration: none;
-    padding: 10px 20px; transition: color 0.15s, background 0.15s;
-    white-space: nowrap;
+    padding: 10px 20px; transition: color 0.15s, background 0.15s; white-space: nowrap;
   }
   .dropdown a:hover { color: var(--ink); background: var(--surface); }
 
-  /* ── LAYOUT ── */
+  /* LAYOUT */
   section { border-bottom: 1px solid var(--rule); }
-  .container       { max-width: 1100px; margin: 0 auto; padding: 100px 40px; }
-  .container.narrow{ max-width: 760px;  margin: 0 auto; padding: 100px 40px; }
+  .container        { max-width: 1100px; margin: 0 auto; padding: 100px 40px; }
+  .container.narrow { max-width: 760px;  margin: 0 auto; padding: 100px 40px; }
 
-  /* ── TYPE ── */
+  /* TYPE */
   .eyebrow {
-    font-family: "Inter", sans-serif;
-    font-weight: 500; font-size: 10px;
+    font-family: "Inter", sans-serif; font-weight: 500; font-size: 10px;
     letter-spacing: 0.3em; text-transform: uppercase;
     color: var(--gold); display: block; margin-bottom: 14px;
   }
-  .gold-rule {
-    display: block; width: 28px; height: 1px;
-    background: var(--gold); margin-bottom: 48px;
-  }
-  h1, h2 {
-    font-family: "EB Garamond", serif;
-    font-weight: 400; line-height: 1.15; color: var(--ink);
-  }
+  .gold-rule { display: block; width: 28px; height: 1px; background: var(--gold); margin-bottom: 48px; }
+  h1, h2 { font-family: "EB Garamond", serif; font-weight: 400; line-height: 1.15; color: var(--ink); }
   h1 { font-size: clamp(38px, 5vw, 60px); letter-spacing: -0.015em; }
   h2 { font-size: clamp(26px, 3.2vw, 38px); letter-spacing: -0.01em; margin-bottom: 40px; }
-
-  /* Section heading — was h3, now much more prominent */
   .section-heading {
-    font-family: "EB Garamond", serif;
-    font-weight: 400; font-size: clamp(22px, 2.5vw, 30px);
-    letter-spacing: -0.005em; line-height: 1.2;
-    color: var(--ink); margin-bottom: 24px;
-    padding-bottom: 18px; border-bottom: 1px solid var(--rule);
+    font-family: "EB Garamond", serif; font-weight: 400;
+    font-size: clamp(22px, 2.5vw, 30px); letter-spacing: -0.005em; line-height: 1.2;
+    color: var(--ink); margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--rule);
   }
-
   p { color: var(--muted); font-size: 15px; line-height: 1.85; margin-bottom: 18px; }
   p:last-child { margin-bottom: 0; }
 
-  /* ── BUTTONS ── */
+  /* BUTTONS */
   .btn {
     display: inline-block; text-decoration: none;
     font-family: "Inter", sans-serif; font-weight: 400;
     font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
     padding: 14px 40px; cursor: pointer; border: none; transition: all 0.25s;
   }
-  .btn-dark    { background: var(--ink); color: var(--cream); }
+  .btn-dark { background: var(--ink); color: var(--cream); }
   .btn-dark:hover { background: #000; }
   .btn-outline { border: 1px solid var(--rule); color: var(--muted); background: transparent; }
   .btn-outline:hover { border-color: var(--ink); color: var(--ink); }
-
-  /* ── HERO ── */
-  #hero {
-    min-height: 100vh;
-    display: flex; align-items: center;
-    padding-top: 60px;
+  .btn-ghost {
+    display: inline-block; text-decoration: none;
+    font-family: "Inter", sans-serif; font-weight: 400;
+    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 14px 40px; cursor: pointer;
+    border: 1px solid var(--rule); color: var(--muted); background: transparent;
+    transition: all 0.25s;
   }
+  .btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+
+  /* HERO */
+  #hero { min-height: 100vh; display: flex; align-items: center; padding-top: 60px; }
   #hero .container {
     display: flex; flex-direction: column;
-    justify-content: center; padding-top: 80px; padding-bottom: 80px;
-    max-width: 860px;
+    justify-content: center; padding-top: 80px; padding-bottom: 80px; max-width: 860px;
   }
   .hero-sub {
-    font-family: "Inter", sans-serif;
-    font-weight: 300; font-size: 10px;
+    font-family: "Inter", sans-serif; font-weight: 300; font-size: 10px;
     letter-spacing: 0.3em; text-transform: uppercase;
     color: var(--gold); margin-bottom: 28px; display: block;
   }
   #hero h1 { margin-bottom: 40px; max-width: 760px; }
   .hero-lines { margin-bottom: 44px; max-width: 580px; }
   .hero-lines p {
-    font-size: 14px; color: var(--muted);
-    line-height: 1.8; margin-bottom: 0;
+    font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 0;
     padding: 11px 0; border-bottom: 1px solid var(--rule);
   }
   .hero-lines p:first-child { border-top: 1px solid var(--rule); }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
 
-  /* ── PROPOSITION ── */
+  /* PROPOSITION */
   .prop-section {
     display: grid; grid-template-columns: 220px 1fr;
-    gap: 0; margin-bottom: 72px; padding-bottom: 72px;
-    border-bottom: 1px solid var(--rule);
+    gap: 0; margin-bottom: 72px; padding-bottom: 72px; border-bottom: 1px solid var(--rule);
   }
   .prop-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .prop-sidebar {
-    padding-right: 48px;
-    border-right: 1px solid var(--rule);
+    padding-right: 48px; border-right: 1px solid var(--rule);
     display: flex; flex-direction: column; padding-top: 6px;
   }
   .prop-sidebar-num {
-    font-family: "EB Garamond", serif;
-    font-size: 52px; color: var(--rule);
+    font-family: "EB Garamond", serif; font-size: 52px; color: var(--rule);
     line-height: 1; margin-bottom: 10px; display: block;
   }
   .prop-sidebar-label {
-    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--gold); display: block;
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); display: block;
   }
   .prop-content { padding-left: 48px; }
 
+  /* WHO WE HELP — audience list */
+  .audience-list { margin: 28px 0; padding: 0; list-style: none; }
+  .audience-list li {
+    padding: 20px 0; border-bottom: 1px solid var(--rule);
+  }
+  .audience-list li:first-child { border-top: 1px solid var(--rule); }
+  .audience-list li strong {
+    display: block; font-family: "Inter", sans-serif; font-weight: 400; font-size: 12px;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); margin-bottom: 6px;
+  }
+  .audience-list li p { font-size: 14px; margin: 0; }
+
+  /* OFFERINGS */
   .offering-list { margin: 22px 0 26px; padding: 0; list-style: none; }
   .offering-list li {
     font-size: 15px; color: var(--muted);
-    padding: 13px 0 13px 20px; border-bottom: 1px solid var(--rule);
-    position: relative;
+    padding: 13px 0 13px 20px; border-bottom: 1px solid var(--rule); position: relative;
   }
   .offering-list li:first-child { border-top: 1px solid var(--rule); }
   .offering-list li::before {
@@ -205,49 +184,47 @@
     width: 4px; height: 4px; background: var(--gold); border-radius: 50%;
   }
 
+  /* Delivery format list */
+  .delivery-list { margin-top: 24px; padding: 0; list-style: none; }
+  .delivery-list li {
+    padding: 16px 0; border-bottom: 1px solid var(--rule);
+  }
+  .delivery-list li:first-child { border-top: 1px solid var(--rule); }
+  .delivery-list li strong {
+    display: block; font-family: "Inter", sans-serif; font-weight: 400; font-size: 12px;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); margin-bottom: 5px;
+  }
+  .delivery-list li p { font-size: 13px; line-height: 1.7; margin: 0; }
+
+  /* APPROACH */
   .approach-box {
-    border: 1px solid var(--rule);
-    padding: 28px 32px; margin: 28px 0;
-    background: var(--surface);
+    border: 1px solid var(--rule); padding: 28px 32px; margin: 28px 0; background: var(--surface);
   }
   .approach-box p {
-    font-family: "EB Garamond", serif;
-    font-weight: 400; font-size: 19px;
-    color: var(--ink); line-height: 1.65; margin: 0;
-    letter-spacing: 0.01em;
+    font-family: "EB Garamond", serif; font-weight: 400; font-size: 19px;
+    color: var(--ink); line-height: 1.65; margin: 0; letter-spacing: 0.01em;
   }
 
-  /* ── ABOUT ── */
-  .about-aim {
-    margin-bottom: 40px; padding-bottom: 40px;
-    border-bottom: 1px solid var(--rule);
-  }
+  /* ABOUT */
+  .about-aim { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid var(--rule); }
   .about-aim p {
-    font-family: "EB Garamond", serif;
-    font-weight: 400; font-size: 22px;
-    color: var(--ink); line-height: 1.6;
-    letter-spacing: 0.01em; margin: 0;
+    font-family: "EB Garamond", serif; font-weight: 400; font-size: 22px;
+    color: var(--ink); line-height: 1.6; letter-spacing: 0.01em; margin: 0;
   }
 
-  /* ── INSIGHTS ── */
+  /* INSIGHTS */
   .insights-grid {
-    display: grid; grid-template-columns: repeat(3,1fr);
-    gap: 1px; background: var(--rule);
-    margin-top: 48px; border: 1px solid var(--rule);
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1px; background: var(--rule); margin-top: 48px; border: 1px solid var(--rule);
   }
-  .insight-card {
-    background: var(--cream); padding: 32px 28px;
-    transition: background 0.2s;
-  }
+  .insight-card { background: var(--cream); padding: 32px 28px; transition: background 0.2s; }
   .insight-card:hover { background: var(--surface); }
   .insight-tag {
-    display: inline-block; font-size: 9px;
-    letter-spacing: 0.2em; text-transform: uppercase;
+    display: inline-block; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--gold); margin-bottom: 14px;
   }
   .insight-title {
-    font-family: "EB Garamond", serif;
-    font-size: 19px; font-weight: 400; line-height: 1.3;
+    font-family: "EB Garamond", serif; font-size: 19px; font-weight: 400; line-height: 1.3;
     color: var(--ink); text-decoration: none; display: block; margin-bottom: 12px;
   }
   .insight-title:hover { color: var(--gold); }
@@ -259,46 +236,38 @@
   .insight-link:hover { color: var(--gold); }
   .insights-footer { margin-top: 36px; }
 
-  /* ── CONTACT ── */
-  .contact-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
-  }
+  /* CONTACT */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
   label {
-    display: block; font-size: 9px;
-    letter-spacing: 0.2em; text-transform: uppercase;
+    display: block; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--muted); margin-bottom: 10px;
   }
   .form-row { margin-bottom: 28px; }
   input[type=text], input[type=email], textarea, select {
-    width: 100%; background: transparent;
-    border: none; border-bottom: 1px solid var(--rule);
+    width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--rule);
     padding: 10px 0; outline: none;
-    font-family: "Inter", sans-serif; font-weight: 300;
-    font-size: 14px; color: var(--ink);
-    transition: border-color 0.2s;
-    border-radius: 0; -webkit-appearance: none;
+    font-family: "Inter", sans-serif; font-weight: 300; font-size: 14px; color: var(--ink);
+    transition: border-color 0.2s; border-radius: 0; -webkit-appearance: none;
   }
   select { cursor: pointer; }
   select option { background: var(--cream); color: var(--ink); }
   input:focus, textarea:focus, select:focus { border-bottom-color: var(--ink); }
-  textarea { resize: none; height: 88px; }
+  textarea { resize: vertical; height: 100px; }
   .form-status { margin-top: 14px; font-size: 13px; color: var(--muted); display: none; }
 
-  /* ── FOOTER ── */
+  /* FOOTER */
+  .footer-wrap { border-top: 1px solid var(--rule); }
   footer {
-    padding: 28px 40px;
-    display: flex; justify-content: space-between; align-items: center;
+    padding: 28px 40px; display: flex; justify-content: space-between; align-items: center;
     max-width: 1100px; margin: 0 auto;
   }
-  .footer-wrap { border-top: 1px solid var(--rule); }
   .footer-brand {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 300; font-size: 12px;
+    font-family: "Cormorant Garamond", serif; font-weight: 300; font-size: 12px;
     letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted);
   }
   .footer-right { font-size: 11px; color: var(--muted); letter-spacing: 0.08em; }
 
-  /* ── MOBILE ── */
+  /* MOBILE */
   @media (max-width: 900px) {
     .nav-main { padding: 0 24px; }
     .nav-links { display: none; }
@@ -312,11 +281,13 @@
     }
     .prop-sidebar-num { font-size: 36px; margin-bottom: 0; }
     .prop-content { padding-left: 0; }
+    .audience-grid { grid-template-columns: 1fr; }
+    .delivery-grid { grid-template-columns: 1fr; }
     .insights-grid { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+    .hero-ctas { flex-direction: column; }
     footer { padding: 24px; flex-direction: column; gap: 10px; text-align: center; }
   }
-
   @media (min-width: 901px) and (max-width: 1200px) {
     .nav-main { padding: 0 32px; }
     .container, .container.narrow { padding: 100px 32px; }
@@ -350,13 +321,16 @@
 <section id="hero">
   <div class="container">
     <span class="hero-sub">Strategy &middot; Finance &middot; Training</span>
-    <h1>Helping professionals excel in finance, strategy &amp; consulting</h1>
+    <h1>Practical finance and strategy training for professionals and organisations</h1>
     <div class="hero-lines">
-      <p>Strengthen the technical and commercial skills needed to succeed in finance, strategy and consulting roles</p>
-      <p>Learn through real companies, real industries, real transactions and real market events</p>
-      <p>Every engagement is tailored to your objectives, experience level and professional goals</p>
+      <p>Helping professionals and teams strengthen their technical expertise, commercial judgement and ability to analyse businesses, markets and strategic decisions</p>
+      <p>Learn through real companies, transactions, industries and market developments</p>
+      <p>Sessions are tailored to the audience&#39;s objectives, experience and development needs</p>
     </div>
-    <a href="#contact" class="btn btn-dark">Book a Complimentary 30-Minute Session</a>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-dark">Discuss your training needs</a>
+      <a href="#insights" class="btn btn-ghost">Explore our insights</a>
+    </div>
   </div>
 </section>
 
@@ -366,6 +340,7 @@
     <span class="eyebrow">Our Proposition</span>
     <span class="gold-rule"></span>
 
+    <!-- 01 Who We Help -->
     <div class="prop-section" id="who-we-help">
       <div class="prop-sidebar">
         <span class="prop-sidebar-num">01</span>
@@ -373,12 +348,30 @@
       </div>
       <div class="prop-content">
         <h2 class="section-heading">Who We Help</h2>
-        <p>The Strategy Desk works with finance, strategy and consulting professionals seeking to strengthen their technical expertise, sharpen their commercial judgement and develop the skills required to succeed in increasingly complex business environments.</p>
-        <p>Our sessions are particularly well suited to analysts, associates and managers in the early-to-mid stages of their careers, as well as organisations looking to strengthen capability across finance, strategy and business teams.</p>
-        <p>Participants come from a broad range of disciplines, including FP&amp;A, business finance, corporate finance, M&amp;A, equity research, credit analysis and management consulting.</p>
+        <p>The Strategy Desk works with professionals and organisations looking to strengthen financial and strategic capabilities through practical, real-world learning.</p>
+        <p>Our primary audience is students and early-to-mid-career professionals, including analysts, associates and managers.</p>
+        <ul class="audience-list">
+          <li>
+            <strong>Corporate teams</strong>
+            <p>Strengthening financial understanding, commercial judgement and strategic thinking across finance, M&amp;A, strategy and other business functions. Training helps participants assess business performance, evaluate investment decisions and approach strategic challenges with greater confidence.</p>
+          </li>
+          <li>
+            <strong>Universities &amp; educational organisations</strong>
+            <p>Bringing practical, industry-led perspectives into academic learning, bridging the gap between theory and professional practice.</p>
+          </li>
+          <li>
+            <strong>Professional training providers</strong>
+            <p>Complementing existing educational programmes with specialist expertise, practical teaching and real-world examples.</p>
+          </li>
+          <li>
+            <strong>Individuals</strong>
+            <p>Developing technical expertise, analytical skills and confidence in applying financial concepts through tailored learning.</p>
+          </li>
+        </ul>
       </div>
     </div>
 
+    <!-- 02 Offerings -->
     <div class="prop-section" id="offerings">
       <div class="prop-sidebar">
         <span class="prop-sidebar-num">02</span>
@@ -386,17 +379,41 @@
       </div>
       <div class="prop-content">
         <h2 class="section-heading">Offerings</h2>
-        <p>Every engagement is tailored to the individual or team&#39;s objectives, experience level and development needs. Common areas of focus include:</p>
+        <p>The Strategy Desk delivers practical training courses across finance, valuation, financial markets and strategic analysis. Courses combine technical foundations with real-world examples and case studies, helping participants understand key concepts and apply them in practice.</p>
+        <p>Core subject areas include:</p>
         <ul class="offering-list">
-          <li>In-depth financial statement analysis</li>
+          <li>Financial statement analysis and business performance</li>
           <li>Company, industry and market analysis</li>
-          <li>Valuation (DCF, NPV, trading and transaction multiples) and financial markets</li>
+          <li>Company valuation, including DCF, NPV and trading and transaction multiples</li>
+          <li>Corporate finance, M&amp;A and investment appraisal</li>
+          <li>Financial markets, bonds and credit analysis</li>
           <li>Commercial and strategic thinking</li>
         </ul>
-        <p>Engagements range from focused sessions on specific topics to broader professional development programmes and can be delivered virtually or in person, on a one-to-one basis, in small groups, or for corporate teams.</p>
+        <p>Courses are structured around these subject areas, with topics, depth and emphasis adapted to participants&#39; experience and learning objectives. A course can focus on selected topics or combine several areas into a broader programme.</p>
+        <h2 class="section-heading" style="margin-top:40px">Delivery formats</h2>
+        <p>Courses can be delivered virtually or in person, with formats adapted to the audience and learning objectives.</p>
+        <ul class="delivery-list">
+          <li>
+            <strong>Corporates</strong>
+            <p>Focused workshops and structured development programmes tailored to team roles, experience and business objectives.</p>
+          </li>
+          <li>
+            <strong>Universities &amp; educational organisations</strong>
+            <p>Guest lectures, workshops, specialist modules and case-study sessions that complement existing curricula.</p>
+          </li>
+          <li>
+            <strong>Professional training providers</strong>
+            <p>Specialist teaching, topic-specific learning materials and practical case studies integrated into existing programmes.</p>
+          </li>
+          <li>
+            <strong>Individuals</strong>
+            <p>One-to-one sessions focused on specific technical topics and professional development objectives.</p>
+          </li>
+        </ul>
       </div>
     </div>
 
+    <!-- 03 Our Approach -->
     <div class="prop-section" id="approach">
       <div class="prop-sidebar">
         <span class="prop-sidebar-num">03</span>
@@ -439,24 +456,49 @@
     <h2>From The Strategy Desk</h2>
     <p>Regular writing on financial markets, valuation, investing and corporate strategy.</p>
     <div class="insights-grid">
+
       <div class="insight-card">
         <span class="insight-tag">Company Analysis</span>
         <a class="insight-title" href="https://substack.com/@thestrategydesk1/p-192192432" target="_blank" rel="noopener">Analyzing companies: A framework for assessing performance and earnings sustainability</a>
         <p class="insight-excerpt">Current performance is only a starting point. Earnings sustainability is critical, and understanding what could change helps frame what comes next.</p>
         <a class="insight-link" href="https://substack.com/@thestrategydesk1/p-192192432" target="_blank" rel="noopener">Read on Substack &rarr;</a>
       </div>
+
       <div class="insight-card">
         <span class="insight-tag">Valuation</span>
         <a class="insight-title" href="https://substack.com/@thestrategydesk1/p-195007398" target="_blank" rel="noopener">Return on Invested Capital (ROIC): A critical metric and a challenging one to compute</a>
         <p class="insight-excerpt">What it means, why it matters, how to build it properly, and why the number you see in a screener is usually just the starting point.</p>
         <a class="insight-link" href="https://substack.com/@thestrategydesk1/p-195007398" target="_blank" rel="noopener">Read on Substack &rarr;</a>
       </div>
+
       <div class="insight-card">
         <span class="insight-tag">Financial Markets</span>
         <a class="insight-title" href="https://substack.com/@thestrategydesk1/p-200273544" target="_blank" rel="noopener">Demystifying Bonds: From Yields and Inflation to Sovereign and Corporate Debt</a>
         <p class="insight-excerpt">Bonds are often viewed as less exciting and more complex than stocks. It does not have to be that way.</p>
         <a class="insight-link" href="https://substack.com/@thestrategydesk1/p-200273544" target="_blank" rel="noopener">Read on Substack &rarr;</a>
       </div>
+
+      <div class="insight-card">
+        <span class="insight-tag">Valuation</span>
+        <a class="insight-title" href="https://thestrategydesk1.substack.com/p/reddit-inc-dcf-valuation-using-aswath" target="_blank" rel="noopener">Reddit Inc: DCF valuation using Aswath Damodaran&#39;s approach</a>
+        <p class="insight-excerpt">A step-by-step DCF valuation of Reddit using Damodaran&#39;s framework, walking through assumptions, model structure and what the numbers say about the market&#39;s expectations.</p>
+        <a class="insight-link" href="https://thestrategydesk1.substack.com/p/reddit-inc-dcf-valuation-using-aswath" target="_blank" rel="noopener">Read on Substack &rarr;</a>
+      </div>
+
+      <div class="insight-card">
+        <span class="insight-tag">Credit &amp; Business Analysis</span>
+        <a class="insight-title" href="https://thestrategydesk1.substack.com/p/mercado-libre-meli-a-deep-dive-into" target="_blank" rel="noopener">Mercado Libre (MELI): A deep dive into MELI&#39;s credit business</a>
+        <p class="insight-excerpt">An in-depth look at MercadoLibre&#39;s credit business, examining its growth, risk profile and what it means for the broader MELI investment case.</p>
+        <a class="insight-link" href="https://thestrategydesk1.substack.com/p/mercado-libre-meli-a-deep-dive-into" target="_blank" rel="noopener">Read on Substack &rarr;</a>
+      </div>
+
+      <div class="insight-card">
+        <span class="insight-tag">M&amp;A</span>
+        <a class="insight-title" href="https://thestrategydesk1.substack.com/p/beyond-the-purchase-price-cash-vs" target="_blank" rel="noopener">Beyond the purchase price: Cash vs Stock in M&amp;A</a>
+        <p class="insight-excerpt">How the choice between cash and stock consideration shapes deal economics, risk allocation and what it signals about how each side values the target.</p>
+        <a class="insight-link" href="https://thestrategydesk1.substack.com/p/beyond-the-purchase-price-cash-vs" target="_blank" rel="noopener">Read on Substack &rarr;</a>
+      </div>
+
     </div>
     <div class="insights-footer">
       <a href="https://substack.com/@thestrategydesk1" target="_blank" rel="noopener" class="btn btn-outline">View All on Substack</a>
@@ -471,54 +513,93 @@
     <span class="gold-rule"></span>
     <div class="contact-grid">
       <div>
-        <h2>Book a Complimentary Introductory Session</h2>
-        <p>Interested in working together? The introductory session is an opportunity for us to understand your background, objectives and development needs, while giving you a chance to learn more about our approach and determine whether we are the right fit.</p>
-        <p style="font-size:13px;color:var(--muted);margin-top:16px;font-style:italic">There is no obligation to proceed further. We will be in touch within 24 hours.</p>
+        <h2>Let&#39;s discuss how we can work together</h2>
+        <p>Whether you&#39;re looking to develop your team, complement an educational programme or strengthen your own technical skills, we&#39;d welcome the opportunity to discuss your objectives.</p>
+        <p>We offer a complimentary introductory session, giving you an opportunity to experience our approach to learning. We&#39;ll discuss your objectives and development needs, and introduce our areas of expertise.</p>
+        <p>Tell us a little about what you&#39;re looking for using the form. We&#39;ll review your enquiry and get in touch within 24 hours to discuss potential next steps.</p>
       </div>
       <div>
         <form id="contact-form" action="https://formspree.io/f/xpqeoakz" method="POST">
+
           <div class="form-row">
-            <label for="fname">Full Name</label>
+            <label for="fenquiry">Enquiry type *</label>
+            <select id="fenquiry" name="enquiry_type" required>
+              <option value="" disabled selected></option>
+              <option>Corporate organisation</option>
+              <option>University or educational organisation</option>
+              <option>Professional training provider</option>
+              <option>Individual professional</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="fname">Name *</label>
             <input type="text" id="fname" name="name" required>
           </div>
+
           <div class="form-row">
-            <label for="femail">Email Address</label>
+            <label for="femail">Email address *</label>
             <input type="email" id="femail" name="email" required>
           </div>
+
           <div class="form-row">
-            <label for="frole">Current Role</label>
+            <label for="flocation">Location (city)</label>
+            <input type="text" id="flocation" name="location">
+          </div>
+
+          <div class="form-row">
+            <label for="forg">Organisation</label>
+            <input type="text" id="forg" name="organisation">
+          </div>
+
+          <div class="form-row">
+            <label for="frole">Job title / role</label>
             <input type="text" id="frole" name="role">
           </div>
+
           <div class="form-row">
-            <label for="fsector">Industry Sector</label>
-            <input type="text" id="fsector" name="sector">
-          </div>
-          <div class="form-row">
-            <label for="fexp">Years of Experience</label>
-            <select id="fexp" name="experience">
+            <label for="finterest">Area of interest *</label>
+            <select id="finterest" name="area_of_interest" required>
               <option value="" disabled selected></option>
-              <option>0&#8211;2 years</option>
-              <option>2&#8211;5 years</option>
-              <option>5&#8211;10 years</option>
-              <option>10+ years</option>
+              <option>Financial statement analysis</option>
+              <option>Company, industry and market analysis</option>
+              <option>Company valuation</option>
+              <option>Corporate finance, M&amp;A and investment appraisal</option>
+              <option>Financial markets</option>
+              <option>A broader or bespoke programme</option>
+              <option>Other</option>
             </select>
           </div>
-          <div class="form-row">
-            <label for="fparticipants">Number of Participants</label>
-            <select id="fparticipants" name="participants">
+
+          <div class="form-row" id="format-row">
+            <label for="fformat">Preferred format</label>
+            <select id="fformat" name="preferred_format">
               <option value="" disabled selected></option>
-              <option>1 (individual)</option>
-              <option>2&#8211;5</option>
-              <option>6&#8211;15</option>
-              <option>16&#8211;30</option>
-              <option>30+</option>
+              <option>Workshop or one-off session</option>
+              <option>Multi-session training programme</option>
+              <option>Guest lecture or educational session</option>
+              <option>Training content or partnership</option>
+              <option>Not sure yet</option>
             </select>
           </div>
+
           <div class="form-row">
-            <label for="fmsg">What would you like to work on?</label>
-            <textarea id="fmsg" name="message"></textarea>
+            <label for="fdetails">Additional details</label>
+            <textarea id="fdetails" name="details" id="fdetails"></textarea>
           </div>
-          <button type="submit" class="btn btn-dark">Send Message</button>
+
+          <div class="form-row">
+            <label for="ftiming">Expected timing</label>
+            <select id="ftiming" name="timing">
+              <option value="" disabled selected></option>
+              <option>As soon as possible</option>
+              <option>Within the next 1&#8211;3 months</option>
+              <option>Just exploring options</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-dark">Send enquiry</button>
           <p class="form-status" id="form-status"></p>
         </form>
       </div>
@@ -535,6 +616,28 @@
 
 <script>
 (function() {
+  // Dynamic textarea placeholder based on enquiry type
+  var enquirySelect = document.getElementById("fenquiry");
+  var detailsTextarea = document.getElementById("fdetails");
+  var formatRow = document.getElementById("format-row");
+
+  var orgTypes = ["Corporate organisation", "University or educational organisation", "Professional training provider"];
+
+  function updateForm() {
+    var val = enquirySelect.value;
+    if (orgTypes.includes(val)) {
+      detailsTextarea.placeholder = "Tell us about your audience, learning objectives, approximate group size, participants’ experience or any specific requirements.";
+      formatRow.style.display = "block";
+    } else {
+      detailsTextarea.placeholder = "Tell us about your current experience, learning objectives and any specific topics you’d like to cover.";
+      formatRow.style.display = "block";
+    }
+  }
+
+  enquirySelect.addEventListener("change", updateForm);
+  updateForm();
+
+  // Form submission
   var form = document.getElementById("contact-form");
   var status = document.getElementById("form-status");
   form.addEventListener("submit", async function(e) {
@@ -549,6 +652,7 @@
       if (res.ok) {
         status.textContent = "Thank you — we will be in touch within 24 hours.";
         form.reset();
+        updateForm();
       } else {
         status.textContent = "Something went wrong. Please try again.";
       }
